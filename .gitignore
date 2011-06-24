@@ -1,0 +1,15 @@
+# @project stuff
+/@project/content
+/@project/images
+/@project/sourcecode/sql_dumps
+/@project/sourcecode/CodeIgniter_2.0.2.zip
+
+# codeigniter config
+/application/config/database.php
+
+# codeigniter stuff
+/user_guide
+
+# except do not ignore .gitignore
+!.gitignore
+
