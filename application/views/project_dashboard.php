@@ -33,7 +33,7 @@ $namechecker = $projects[0]->projectname;
 
 ?>
 <li>
-	<h2><?php echo $projects[0]->projectname;?> <?php echo anchor('projectform/'.$projects[0]->projectid.'/edit', 'Edit', array('class' => 'edit')); ?></h2>
+	<h2><?php echo $projects[0]->projectname;?> <?php echo anchor('project/projectform/'.$projects[0]->projectid, 'Edit', array('class' => 'edit')); ?></h2>
 	<ul>
 <?php
 
@@ -60,9 +60,9 @@ foreach ($projects as $item) {
 </li>
 </ul>
 
-</div>
+	<br clear="all" />
 
-<br clear="all" />
+</div>
 
 <p id="footer">Page rendered in {elapsed_time} seconds</p>
 

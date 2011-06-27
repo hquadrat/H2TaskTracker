@@ -42,7 +42,11 @@ class Task extends CI_Controller {
 	public function edit()
 	{
 
-		$this->load->view('project_dashboard');
+		$this->load->model('Taskmodel');
+
+		$this->Taskmodel->update_entry();;
+		
+		redirect('project');
 
 	}
 
@@ -50,17 +54,38 @@ class Task extends CI_Controller {
 	public function taskform()
 	{
 
-		if(!empty($_POST['id'])) {
-			$data['id'] = $_POST['id'];
-			$this->load->view('task_form', $data);
-		}
-		else {
+		$editID = $this->uri->segment(3, 0);
 
-			//load projects for selection
+		if( (!empty($editID)) && ($editID != 0) ) {
+
+			$this->load->model('Taskmodel');
+
+			//task core data
+			$data['taskEditID'] = $editID;
+			$data['task'] = $this->Taskmodel->get_task( $editID );
+			$data['task_project'] = $this->Taskmodel->get_task_project( $editID );
+
+
+			//load projects for select box
 			$this->load->model('Projectmodel');
 			$data['projects'] = $this->Projectmodel->get_active_entries();
 
-			//load persons for selection
+			//load persons for select box
+			$this->load->model('Personmodel');
+			$data['persons'] = $this->Personmodel->get_active_entries();
+
+
+			//the view
+			$this->load->view('task_form', $data);
+
+		}
+		else {
+
+			//load projects for select box
+			$this->load->model('Projectmodel');
+			$data['projects'] = $this->Projectmodel->get_active_entries();
+
+			//load persons for select box
 			$this->load->model('Personmodel');
 			$data['persons'] = $this->Personmodel->get_active_entries();
 
