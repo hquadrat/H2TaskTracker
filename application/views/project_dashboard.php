@@ -24,13 +24,15 @@
 <?php
 	//var_dump($projects);
 ?>
+<div id="dashboard_container">
 
+<ul id="project_dashboard">
 <?php
 
 $namechecker = $projects[0]->projectname;
 
 ?>
-<div>
+<li>
 	<h2><?php echo $projects[0]->projectname;?> <?php echo anchor('projectform/'.$projects[0]->projectid.'/edit', 'Edit', array('class' => 'edit')); ?></h2>
 	<ul>
 <?php
@@ -41,8 +43,8 @@ foreach ($projects as $item) {
 		$namechecker = $item->projectname;
 ?>
 	</ul>
-</div>
-<div>
+</li>
+<li>
 	<h2><?php echo $item->projectname;?> <?php echo anchor('project/projectform/'.$item->projectid, 'Edit', array('class' => 'edit')); ?></h2>
 	<ul>
 
@@ -51,10 +53,16 @@ foreach ($projects as $item) {
 
 ?>
 
-		<li><p><?php echo $item->taskname;?> <?php echo anchor('task/taskform/'.$item->taskid, 'Edit', array('class' => 'edit')); ?><br /><?php echo $item->taskdescription;?></p></li>
+		<li><?php echo $item->taskname;?> <?php echo anchor('task/taskform/'.$item->taskid, 'Edit', array('class' => 'edit')); ?><br /><span class="taskdescription"><?php echo $item->taskdescription;?></span></li>
 
 <?php } ?>
+</ul>
+</li>
+</ul>
+
 </div>
+
+<br clear="all" />
 
 <p id="footer">Page rendered in {elapsed_time} seconds</p>
 
