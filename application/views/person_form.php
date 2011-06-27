@@ -33,7 +33,7 @@ Lastname: <?php echo form_input('lastname'); ?><br />
 	<select name="address" id="address">
 
 <?php foreach ($addresses as $item) {?>
-	<option value="<?php echo $item->idt_address;?>"><?php echo $item->street;?>, <?php echo $item->postalcode;?> <?php echo $item->city;?></option>
+	<option value="<?php echo $item->idt_address;?>"><?php echo $item->emailbusiness;?> <?php echo $item->street;?>, <?php echo $item->postalcode;?> <?php echo $item->city;?></option>
 <?php } ?>
 
 	</select>

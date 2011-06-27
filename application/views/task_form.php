@@ -21,8 +21,6 @@
 	$this->load->view('statics/navigation');
 ?>
 
-<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
 <?php echo form_open('task/add'); ?>
 
 Name: <?php echo form_input('name'); ?><br />

@@ -33,5 +33,11 @@
 				<li><?php echo anchor('person/personform', 'Person hinzufügen', 'title="eine neue Person hinzufügen"'); ?></li>
 			</ul>
 		</li>
+		<li>Adressen
+			<ul>
+				<li><?php echo anchor('address', 'Adressen Übersicht'); ?></li>
+				<li><?php echo anchor('address/addressform', 'Adresse hinzufügen', 'title="eine neue Person hinzufügen"'); ?></li>
+			</ul>
+		</li>
 	</ul>
 </div>
