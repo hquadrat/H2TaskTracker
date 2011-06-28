@@ -26,7 +26,7 @@ class Projectmodel extends CI_Model {
     function project_task_overview()
     {
 
-		$this->db->select('t_project.name AS projectname, t_project.idt_project AS projectid, t_task.name AS taskname, t_task.idt_task AS taskid, t_task.description AS taskdescription');
+		$this->db->select('t_project.name AS projectname, t_project.idt_project AS projectid, t_task.name AS taskname, t_task.idt_task AS taskid, t_task.description AS taskdescription, t_task.percentfinished AS taskpercentfinished');
 		$this->db->from('t_project, t_project_has_t_task, t_task');
 		$this->db->where('t_project.idt_project = t_project_has_t_task.t_project_idt_project AND t_project_has_t_task.t_task_idt_task = t_task.idt_task');
 //		$this->db->join('t_project_has_t_task', 't_project.idt_project = t_project_has_t_task.t_project_idt_project');

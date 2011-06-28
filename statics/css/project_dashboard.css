@@ -20,17 +20,19 @@
 	padding: 0;
 	margin: 0;
 }
+
 #project_dashboard li {
 	float: left;
 	position: relative;
-	width: 300px;
-/*	padding: 10px;	*/
-	margin: 0 1.5em 1.5em 0;
+	width: 22%;
+	height: 350px;
+	overflow: auto;
+	margin: 0 2% 2% 0;
 	background-color: #555;
 	border: 2px solid #000000;
-/*
-	-moz-box-shadow: 0px 2px 15px #333;
-*/
+
+	-moz-box-shadow: 0px 2px 15px #fff;
+
 	font-size: 95%;
 
 }
@@ -44,16 +46,28 @@
 #project_dashboard li ul li {
 	float: none;
 	width: 94%;
+	height: auto;
 	padding: 1%;
 	margin: 2%;
 	background-color: #666;
 	border: 0;
 
 	color: #fff;
+
+	-moz-box-shadow: none;
 }
 
 #project_dashboard li ul li .taskdescription {
 	font-size: 85%;
+}
+
+#project_dashboard li ul li .taskpercentfinished {
+	font-size: 70%;
+	display: inline-block;
+	float: right;
+	width: 30px;
+
+	text-align: center;
 }
 
 #project_dashboard li h2 {

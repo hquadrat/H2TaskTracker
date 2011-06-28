@@ -9,7 +9,7 @@
 	?>
 
 </head>
-<body>
+<body style="background-color: #333;">
 
 <?php
 	$this->load->view('statics/flash_message');
@@ -53,7 +53,38 @@ foreach ($projects as $item) {
 
 ?>
 
-		<li><?php echo $item->taskname;?> <?php echo anchor('task/taskform/'.$item->taskid, 'Edit', array('class' => 'edit')); ?><br /><span class="taskdescription"><?php echo $item->taskdescription;?></span></li>
+		<li>
+			<?php echo $item->taskname;?> <?php echo anchor('task/taskform/'.$item->taskid, 'Edit', array('class' => 'edit')); ?><br />
+			<span class="taskdescription"><?php echo $item->taskdescription;?></span>
+			<?php
+				// funny percentage styling
+				$outPercentage = (int)$item->taskpercentfinished;
+
+				if ($outPercentage >= 0 && $outPercentage < 20) {
+
+					$outColor = "042D04";
+
+				} elseif ($outPercentage >= 20 && $outPercentage < 40) {
+
+					$outColor = "085A08";
+
+				} elseif ($outPercentage >= 40 && $outPercentage < 60) {
+
+					$outColor = "0C860C";
+
+				} elseif ($outPercentage >= 60 && $outPercentage < 80) {
+
+					$outColor = "10B310";
+
+				} else {
+
+					$outColor = "00FF00";
+					$outColor = "14E014";
+
+				}
+			?>
+			<span style="background-color: #<?php echo $outColor;?>;" class="taskpercentfinished"><?php echo $item->taskpercentfinished;?>%</span>
+		</li>
 
 <?php } ?>
 </ul>
