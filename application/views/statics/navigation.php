@@ -5,7 +5,7 @@
  */
 
 ?>
-<div style="position: absolute; right: 100px; margin-top:20px; padding: 1em; border: 1px solid #d0d0d0; background-color: #efefef;">
+<div style="position: absolute; right: 40px; font-size: 95%; padding: 1em; border: 1px solid #d0d0d0; background-color: #efefef;">
 	<h4>Navigation</h4>
 	<ul>
 		<li><?php echo anchor('', 'Home'); ?></li>
