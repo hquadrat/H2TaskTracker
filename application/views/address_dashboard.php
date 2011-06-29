@@ -5,21 +5,21 @@
 	<title>Adressen Dashboard</title>
 
 	<?php
-	$this->load->view('statics/css');
+	$this->load->view('statics/xhtml_head');
 	?>
 
 </head>
 <body>
 
 <?php
+	$this->load->view('statics/navigation');
+?>
+
+<?php
 	$this->load->view('statics/flash_message');
 ?>
 
 <h1>Adressen Dashboard</h1>
-
-<?php
-	$this->load->view('statics/navigation');
-?>
 
 <table cellpadding="4" cellspacing="2">
 

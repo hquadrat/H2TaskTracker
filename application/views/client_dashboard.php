@@ -5,21 +5,21 @@
 	<title>Client Dashboard</title>
 
 	<?php
-	$this->load->view('statics/css');
+	$this->load->view('statics/xhtml_head');
 	?>
 
 </head>
 <body>
 
 <?php
+	$this->load->view('statics/navigation');
+?>
+
+<?php
 	$this->load->view('statics/flash_message');
 ?>
 
 <h1>Client Dashboard</h1>
-
-<?php
-	$this->load->view('statics/navigation');
-?>
 
 <?php foreach ($clients as $item) {?>
 

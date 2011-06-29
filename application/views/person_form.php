@@ -5,11 +5,15 @@
 	<title>Person anlegen</title>
 
 	<?php
-	$this->load->view('statics/css');
+	$this->load->view('statics/xhtml_head');
 	?>
 
 </head>
 <body>
+
+<?php
+	$this->load->view('statics/navigation');
+?>
 
 <?php
 	$this->load->view('statics/flash_message');
@@ -17,9 +21,6 @@
 
 <h1>Person anlegen</h1>
 
-<?php
-	$this->load->view('statics/navigation');
-?>
 
 <?php echo form_open('person/add'); ?>
 

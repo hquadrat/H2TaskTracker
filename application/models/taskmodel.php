@@ -87,6 +87,7 @@ class Taskmodel extends CI_Model {
 		);
 
 
+		//encapsulate db actions in a transaction
 		$this->db->trans_start();
 
 		$this->db->where('idt_task', $_POST['taskeditid']);
@@ -100,6 +101,7 @@ class Taskmodel extends CI_Model {
 		$this->db->where('t_task_idt_task', $_POST['taskeditid']);
 		$this->db->update('t_project_has_t_task', $nm_relation_data);
 
+		//end transaction
 		$this->db->trans_complete();
 
 		if ($this->db->trans_status() === FALSE)

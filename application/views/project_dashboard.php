@@ -1,24 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Projects Dashboard</title>
+<?php
+	$pageTitle = "Projects Dashboard";
+?>
 
 	<?php
-	$this->load->view('statics/css');
+	$this->load->view('statics/xhtml_head');
 	?>
+
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		$("#hide_button").toggle();
+		$("#panel_contents").toggle();
+
+		$("#show_button").click(function(){
+			$("#panel_contents").toggle();
+			$("#panel_contents").animate({
+				height: "48px"
+			}, 400);
+			$("#hide_button").toggle();
+			$("#show_button").toggle();
+
+		});
+
+	   $("#hide_button").click(function(){
+			$("#panel_contents").animate({
+				height: "0px"
+			}, 400, function() {
+					$("#panel_contents").toggle();
+				}
+			);
+		
+			$("#hide_button").toggle();
+			$("#show_button").toggle();
+
+	   });
+
+	});
+
+	</script>
 
 </head>
 <body style="background-color: #333;">
 
 <?php
-	$this->load->view('statics/flash_message');
+	$this->load->view('statics/navigation');
 ?>
 
-<h1>Projects Dashboard</h1>
-
 <?php
-	$this->load->view('statics/navigation');
+	$this->load->view('statics/flash_message');
 ?>
 
 <?php

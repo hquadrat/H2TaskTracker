@@ -9,8 +9,8 @@
 */
 
 #dashboard_container {
-	padding: 1em;
-	width: 80%;
+	padding: 5% 1% 0 1%;
+	width: 98%;
 
 	background-color: #333;
 }
@@ -30,9 +30,9 @@
 	margin: 0 2% 2% 0;
 	background-color: #555;
 	border: 2px solid #000000;
-
+/*
 	-moz-box-shadow: 0px 2px 15px #fff;
-
+*/
 	font-size: 95%;
 
 }
@@ -53,8 +53,9 @@
 	border: 0;
 
 	color: #fff;
-
+/*
 	-moz-box-shadow: none;
+*/
 }
 
 #project_dashboard li ul li .taskdescription {
