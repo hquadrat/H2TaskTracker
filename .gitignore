@@ -10,6 +10,9 @@
 # codeigniter stuff
 /user_guide
 
+# single files for whatever reason
+application/views/statics/navigation.old.php
+
 # except do not ignore .gitignore
 !.gitignore
 

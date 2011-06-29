@@ -12,7 +12,10 @@
 
 	<link rel="stylesheet" href='<?php echo base_url(); ?>/statics/css/project_dashboard.css' type="text/css" media="screen, projection" />
 
+<!--
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+-->
+	<script type="text/javascript" src="<?php echo base_url(); ?>/statics/js/jquery-1.6.1.min.js"></script>
 
 
 
